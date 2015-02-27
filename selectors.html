@@ -9,14 +9,27 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+ 
+
+
+
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
     
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-    
+
+          <!--Script and Stylesheet for Syntax Code Highlighter -->
+      <script type="text/javascript" src="assets/js/vendor/shCore.js"></script>
+      <script type="text/javascript" src="assets/js/vendor/shBrushJScript.js"></script>
+      <link type="text/css" rel="stylesheet" href="assets/css/shThemeMidnight.css"/>
+
+      
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -143,29 +156,100 @@
 				<div class="page-header"><h1>JS Selectors</h1></div>
 
 				<!--Example Content start -->
-				<div class="container">
+				<div class="container-fluid">
+
+
+
+          <!--Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#playground" role="tab" data-toggle="tab">Playground</a></li>
+            <li><a href="#code" role="tab" data-toggle="tab">Code</a></li>
+
+          </ul>
+
 					
-					<div class="col-sm-12">
-						<table class="table table-bordered">
-							<th>Logo</th><th>Name</th><th>City</th><th>Arena</th>
-							<tr id="clippers"><td>"sampleImg"</td><td>Clippers</td><td>Los Angeles</td><td>Staples Center</td></tr>
-							<tr id="lakers"><td>"sampleImg"</td><td>Lakers</td><td>Los Angeles</td><td>Staples Center</td></tr>
-						</table>
+
+
+            <!--Panel Content Start-->
+            <div class="tab-content">
+
+              
+                <!--Start of teams table panel-->
+                <div id="playground" class="tab-pane active">
+                  <table id="teamTable" class="table table-bordered">
+                  <th>Logo</th><th>Name</th><th>City</th><th>Arena</th>
+                  <tr id="lakers"><td class="clipperLogo"></td><td>Lakers</td><td>Los Angeles</td><td>Staples Center</td></tr>
+                  <tr id="celtics"><td class="celticsLogo"></td><td>Celtic</td><td>Boston</td><td>TD Garden</td></tr>
+                  <tr id="clippers"><td class="clippersLogo"></td><td>Clippers</td><td>Los Angeles</td><td>Staples Center</td></tr>
+                  <tr id="rockets"><td class="rocketsLogo"></td><td>Rockets</td><td>Houston</td><td>Toyota Center</td></tr>
+                  <tr id="bulls"><td class="bullsLogo"></td><td>Bulls</td><td>Chicago</td><td>United Center</td></tr>                                          
+                  </table>
+                </div>
+                <!--End teamsTable panel-->
+
+
+
+              <!--Start of code section panel-->
+              <div id="code" class="tab-pane">
+                  <pre class="brush: js; highlights: null">
+
+                  <table>
+
+                    <tr><th>Logo</th><th>Name</th><th>City</th><th>Arena</th></tr>
+                     
+                    <tr id="lakers">
+                        <td class="clipperLogo"></td>
+                        <td>Lakers</td>
+                        <td>Los Angeles</td>
+                        <td>Staples Center</td>
+                    </tr>
+
+                    <tr id="celtics">
+                      <td class="celticsLogo"></td>
+                      <td>Celtic</td>
+                      <td>Boston</td>
+                      <td>TD Garden</td>
+                    </tr>
+
+
+                    <tr id="clippers">
+                      <td class="clippersLogo"></td>
+                      <td>Clippers</td>
+                      <td>Los Angeles</td>
+                      <td>Staples Center</td>
+                    </tr>
+
+
+                    <tr id="rockets">
+                      <td class="rocketsLogo"></td>
+                      <td>Rockets</td>
+                      <td>Houston</td>
+                      <td>Toyota Center</td>
+                    </tr>
+
+
+                    <tr id="bulls">
+                      <td class="bullsLogo"></td>
+                      <td>Bulls</td>
+                      <td>Chicago</td>
+                      <td>United Center</td>
+                    </tr>
+
+                  </table>
+                  
+                  </pre>                   
+              <!--End code section panel-->
+              </div>
+
+
+            </div>
+            <!--End of Panel Content -->
+
+
 					</div>
+          <!--End of Container -->
 
 
-
-					<div class="row">
-						<div class="col-sm-6">
-							<textarea id="testIt"></textarea>
-							<button type="button" class="btn btn-primary">Get Team</button>
-						</div>
-					</div>
-
-
-
-				</div>
-				<!--Example Content end-->
                       
                   
       <!-- **********************************************************************************************************************************************************
@@ -190,7 +274,7 @@
     <!--common script for all pages-->
     <script src="assets/js/vendor/common-scripts.js"></script>
 
-
+          <script type="text/javascript">SyntaxHighlighter.all();</script>  
     <!--Page Specific scripts -->
     <script src="assets/js/selectors.js"></script>
 
