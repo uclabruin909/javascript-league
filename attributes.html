@@ -54,7 +54,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Vanilla Javascript</b></a>
+            <a href="index.html" class="logo"><b>JS Basketball League</b></a>
             <!--logo end-->
         </header>
       <!--header end-->
@@ -68,27 +68,17 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/logo.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Vanilla Javascript</h5>
+              	  <p class="centered"><a href="profile.html"><img class="mainLogo" src="assets/images/logo/jsLogo1.png"></a></p>
+
               	  	
+
+
                   <li class="mt">
-                      <a class="active" href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Basics</span>
-                      </a>
-                  </li>
-
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="selectors.html" >
                           <i class="fa fa-desktop"></i>
                           <span>Selectors</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Guide</a></li>
-                          <li><a  href="">Playground</a></li>
-                      </ul>
-                  </li>                  
+                  </li>                     
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -156,7 +146,7 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
-          <section class="wrapper">
+          <section class="wrapper container">
 
 				<div class="page-header"><h1>JS Attributes</h1></div>
 
@@ -165,7 +155,7 @@
 					 
                       <div class="row">
 
-                        <div class="col-md-12">
+                        <div class="col-xs-12">
 
                             <div class="row">   
 
@@ -176,14 +166,12 @@
                                         <!-- Profile Image -->
                                         <div class="col-lg-12 col-md-12 col-sm-3 col-xs-12 ">
 
-                                            <div class="image-holder one" id="pic_prof_1"  style="display:none">
+                                            <div class="image-holder one" id="pic_prof_1">
 
-                                                <img class="head-image up circle" src="http://placehold.it/150x150" width="150" height="150">
+                                                <img class="head-image up circle" src="./assets/images/players/lebronJames" width="150" height="150">
 
                                             </div>
 
-                                            <!-- style for simple image profile -->   
-                                            <div class="circle-img" id="pic_prof_2"></div>
 
                                         </div>
                                         <!-- End Profile Image -->
@@ -192,18 +180,15 @@
 
                                             <!-- Profile info -->
                                             <div id="profile_info">
-                                                <h1 id="name">brown smith</h1>
-                                                <h4 class="line">GRAPHIC &amp; WEB DESIGNER</h4>
-                                                <h6><span class="fa fa-map-marker"></span> San Francisco , CA</h6>
+                                                <h1 id="name">Lebron James</h1>
+                                                <h4 class="line">#23</h4>
                                             </div>
                                             <!-- End Profile info -->  
 
 
                                             <!-- Profile Description -->
                                             <div id="profile_desc">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac risus nibh. Donec adipiscing luctus tur
-                                                </p>
+
                                             </div>
                                             <!-- End Profile Description --> 
 
@@ -214,15 +199,15 @@
 
 
                                 <!--MAIN PLAYER CONTENT SECTION START -->
-                                <div class="col-md-8 player-content">
+                                <div class="col-md-9 player-content">
                                     <div class="row top-p">
                                                     <div class="col-md-4 profile-l">
 
                                                         <!--About me-->
                                                         <div class="title_content">
-                                                            <div class="text_content">brown smith</div>
-                                                            <div class="clear"></div>
+                                                            <div class="text_content">Information</div>
                                                         </div>
+                                                        <div class="clear"></div>
 
                                                         <ul class="about">
 
@@ -254,30 +239,65 @@
                                                                 <div class="clear"></div>
                                                             </li>
 
-                                                            <li>
-                                                                <i class="glyphicon glyphicon-phone"></i>
-                                                                <label>Phone</label>
-                                                                <span class="value">+123 (21) 1234-5678</span>
-                                                                <div class="clear"></div>
-                                                            </li>
-
-                                                            <li>
-                                                                <i class="glyphicon glyphicon-globe"></i>
-                                                                <label>Website</label>
-                                                                <span class="value"><a href="#" target="_blank">www.brown-smith.com</a></span>
-                                                                <div class="clear"></div>
-                                                            </li>
-
                                                         </ul>
 
                                                     </div>
                                                     <!-- End left-wrap -->
 
-                                                    <div class="col-md-4 profile-r">
 
-                                                        <div class="cycle-slideshow">
-                                                            <img src="http://placehold.it/348x456" alt="" />
-                                                    </div>
+
+
+
+                                                    <div class="col-md-5 col-xs-12 profile-r">
+                                                      <div class="title_content">
+                                                        <div class="text_content">Skill Rating</div>
+                                                      </div>
+                                                        <div class="clear"></div>
+
+                                                        <div class="row">
+                                                          <ul class="about">
+
+                                                            <li>
+                                                                <i class="glyphicon glyphicon-user"></i>
+                                                                <label>SHOOTING</label>
+                                                                <span class="value">
+                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                </span>
+                                                                <div class="clear"></div>
+                                                            </li>
+
+                                                            <li>
+                                                                <i class="glyphicon glyphicon-calendar"></i>
+                                                                <label>PASSING</label>
+                                                                <span class="value">
+                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                </span>
+                                                                <div class="clear"></div>
+                                                            </li>
+
+                                                            <li> 
+                                                                <i class="glyphicon glyphicon-map-marker"></i>
+                                                                <label>DEFENSE</label>
+                                                                <span class="value">
+                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                </span>
+                                                                <div class="clear"></div>
+                                                            </li>
+
+                                                            <li>
+                                                                <i class="glyphicon glyphicon-envelope"></i>
+                                                                <label>LEADERSHIP</label>
+                                                                <span class="value">
+                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                </span>
+                                                                <div class="clear"></div>
+                                                            </li>
+
+                                                        </ul>
+                                                      
+
+                                                        </div>
+                                                      </div>
 
                                                 </div>
 
