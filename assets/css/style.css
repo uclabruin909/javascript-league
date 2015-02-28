@@ -242,7 +242,7 @@ ul.sidebar-menu li a.active i {
 
 /* MAIN CONTENT CONFIGURATION */
 #main-content {
-    margin-left: 210px;
+    margin-left: 220px;
 }
 
 .header {
@@ -258,15 +258,15 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    background: #779fff;
+    background: #424a5d;
     border-bottom: 1px solid #c9aa5f;
 }
 
 .wrapper {
     display: inline-block;
     margin-top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 45px;
+    padding-right: 30px;
     padding-bottom: 15px;
     padding-top: 0px;
 }
@@ -274,7 +274,7 @@ ul.sidebar-menu li a.active i {
 a.logo {
     font-size: 20px;
     color: #ffffff;
-    float: left;
+    float: right;
     margin-top: 15px;
     text-transform: uppercase;
 }
@@ -603,14 +603,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 300;
 }
 
-.wrapper {
-    display: block;
-
-    overflow: hidden;
-    position: absolute;
-    top: 50%; 
-    margin: -290.5px auto 0 auto;
-}
 h1 {
     font-size: 18px;
     text-transform: uppercase;
@@ -675,7 +667,7 @@ a {
 .title_content {
     display: inline-block;
     font-size: 20px;
-    color: #ffffff;
+    color: #333333;
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
@@ -704,12 +696,12 @@ a {
 }
 
 ul.about li span.value {
-    width: 220px;
-    text-align: left;
-    float: right;
+    display: block;
+    margin: 0;
 }
 ul.about li {
     margin: 0;
+    margin-bottom: 5%;
     color: #717171;
     display: block;
     font-size: 13px;
@@ -729,7 +721,7 @@ ul.about {
 ---------------------------------------------------*/
 
 .widget-profil{
-    height: 580px;   
+    height: auto;   
     float: right; 
 }
 .widget-profil .circle {
@@ -954,7 +946,7 @@ ul.about {
         margin:0;
     }
     ul.about li span.value {
-        float: none;
+        float: right;
     }
     .text_content {
         font-size: 12px;
@@ -974,10 +966,10 @@ ul.about {
 
     ul.about li {
         font-size: 11px;
-        margin:0;
+        margin-bottom: 2%;
     }
     ul.about li span.value {
-        float: none;
+        float: right;
     }
     .text_content {
         font-size: 12px;
@@ -988,12 +980,25 @@ ul.about {
 
 
 @media screen and (max-width: 554px) {
-    
+    ul.about li {
+        font-size: 11px;
+        margin-bottom: 2%;
+    }
+    ul.about li span.value {
+        float: right;
+    }
+    .text_content {
+        font-size: 12px;
+    }
+   
+
+}
 
 @media screen and (max-width: 1200px) {
 
     ul.about li span.value {
-        width: 196px;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -1012,6 +1017,23 @@ li h6{
 }
 .panel{
     border:none !important; 
+}
+
+
+.mCSB_container {
+width: auto;
+margin-right: 30px;
+overflow: hidden;
+padding: 15px;
+}
+
+
+.player-content div{
+    margin-left: 5%; 
+}
+
+.container-fluid {
+    margin: 0 auto 0 auto;
 }
 
 /**********************************************/
