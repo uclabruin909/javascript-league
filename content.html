@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <title>Interactive JS Site</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
+    
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+          <!--Script and Stylesheet for Syntax Code Highlighter -->
+      <script type="text/javascript" src="assets/js/vendor/shCore.js"></script>
+      <script type="text/javascript" src="assets/js/vendor/shBrushJScript.js"></script>
+      <link type="text/css" rel="stylesheet" href="assets/css/shThemeMidnight.css"/>
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <style>
+
+            @media only screen and (max-width : 800px){
+
+            .widget-profil {
+                    float: none !important;
+                }
+            }
+
+            .widget-profil {
+                float: left;
+            }
+
+
+
+            /*********Style Prop For User Interaction Playground ********/
+              
+                 .stepForm-step p {
+                  margin-top: 10px;
+              }
+
+              .stepForm-row {
+                  display: table-row;
+                  width: 80%;
+              }
+
+              .stepForm {
+                  display: table;
+                  width: 95%;
+                  position: relative;
+                  text-align: center;
+              }
+
+              .stepForm-step button[disabled] {
+                  opacity: 1 !important;
+                  filter: alpha(opacity=100) !important;
+              }
+
+              .stepForm-row:before {
+                  top: 14px;
+                  bottom: 0;
+                  position: absolute;
+                  content: " ";
+                  width: 100%;
+                  height: 1px;
+                  background-color: #ccc;
+                  z-order: 0;
+
+              }
+
+              .stepForm-step {
+                  display: table-cell;
+                  text-align: center;
+                  position: relative;
+              }
+
+              .btn-circle {
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                padding: 6px 0;
+                font-size: 12px;
+                line-height: 1.428571429;
+                border-radius: 15px;
+              }         
+            /************************************************************/
+
+
+        </style>
+
+
+
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>JS Basketball League</b></a>
+            <!--logo end-->
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+              	  <p class="centered"><a href="profile.html"><img class="mainLogo" src="assets/images/logo/jsLogo1.png"></a></p>
+
+              	  	
+
+
+                  <li class="mt">
+                      <a href="selectors.html" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Selectors</span>
+                      </a>
+                  </li>                     
+
+                  <li class="sub-menu">
+                      <a href="attributes.html" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Properties</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Traversal</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="">Guide</a></li>
+                          <li><a  href="">Playground</a></li>
+                          <li><a  href="">Todo List</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active"href="content.html" >
+                          <i class="fa fa-book"></i>
+                          <span>Manipulation/Content</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>Styles</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="">Styling</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-th"></i>
+                          <span>Positioning</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="">Guide</a></li>
+                          <li><a  href="">Playground</a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper container">
+
+				<div class="page-header"><h1>DOM Content With Javascript</h1></div>
+
+        <!--Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#playground" role="tab" data-toggle="tab">Playground</a></li>
+            <li><a href="#code" role="tab" data-toggle="tab">Code</a></li>
+
+          </ul>
+
+          
+
+         <!--Panel Content Start-->
+            <div class="tab-content">
+
+              
+                <!--Start of teams table panel-->
+                <div id="playground" class="tab-pane active">
+                  <!--Example Content start -->
+                  <div class="container-fluid">
+                     
+                                <div class="row">
+
+                                  <div class="col-xs-12">
+
+                                      <div class="row">   
+
+
+                                          <div class="col-md-3 widget-profil">
+                                              <div class="row">
+
+                                                  <!-- Profile Image -->
+                                                  <div class="col-lg-12 col-md-12 col-sm-3 col-xs-12 ">
+
+                                                      <div class="image-holder one" id="pic_prof_1">
+
+                                                          <img class="head-image up circle" src="./assets/images/players/lebronJames" width="150" height="150">
+
+                                                      </div>
+
+
+                                                  </div>
+                                                  <!-- End Profile Image -->
+
+                                                  <div class="col-lg-12 col-md-12 col-sm-9 col-xs-12">
+
+                                                      <!-- Profile info -->
+                                                      <div id="profile_info">
+                                                          <h1 id="name">Lebron James</h1>
+                                                          <h4 class="line">#23</h4>
+                                                      </div>
+                                                      <!-- End Profile info -->  
+
+
+                                                      <!-- Profile Description -->
+                                                      <div id="profile_desc">
+
+                                                      </div>
+                                                      <!-- End Profile Description --> 
+
+                                                  </div>
+
+                                              </div>
+                                          </div>
+
+
+                                          <!--MAIN PLAYER CONTENT SECTION START -->
+                                          <div class="col-md-9 player-content">
+                                              <div class="row top-p">
+                                                              <div class="col-md-6 profile-l">
+
+                                                                  <!--About me-->
+                                                                  <div class="title_content">
+                                                                      <div class="text_content">Footage</div>
+                                                                  </div>
+                                                                  <div class="clear"></div>
+
+                                                                  <!--Video Footage -->
+                                                                  <div class="embed-container">
+                                                                   <iframe src="https://www.youtube.com/embed/l0MBHKAjI2c"; frameborder="0"> </iframe>
+                                                                  </div>
+
+                                           
+
+                                                              </div>
+                                                              <!-- End left-wrap -->
+
+
+
+
+
+                                                              <div class="col-md-6 col-xs-12 profile-r">
+                                                                <div class="title_content">
+                                                                  <div class="text_content">Scouting Report</div>
+                                                                </div>
+                                                                  <div class="clear"></div>
+
+                                                                  <div class="row">
+                                                                    <ul class="about">
+
+                                                                      <li>
+                                                                          <i class="glyphicon glyphicon-user"></i>
+                                                                          <label><b>Strength</b></label>
+                                                                          <span class="value">
+                                                                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                          </span>
+                                                                          <div class="clear"></div>
+                                                                      </li>
+
+                                                                      <li>
+                                                                          <i class="glyphicon glyphicon-calendar"></i>
+                                                                          <label><b>Weaknesses</b></label>
+                                                                          <span class="value">
+                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                          </span>
+                                                                          <div class="clear"></div>
+                                                                      </li>
+
+                                                                      <li> 
+                                                                          <i class="glyphicon glyphicon-map-marker"></i>
+                                                                          <label><b>Notes</b></label>
+                                                                          <span class="value">
+                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                          </span>
+                                                                          <div class="clear"></div>
+                                                                      </li>
+
+                                                                  </ul>
+                                                                
+
+                                                                  </div>
+                                                                </div>
+
+                                                          </div>
+
+                                                          <div class="clear"></div>
+
+                                          </div>
+                                          <!--MAIN PLAYER CONTENT SECTION END -->
+
+           
+
+                                      </div><!-- End row -->
+
+                                  </div><!-- End col-md-12 -->
+
+                              </div><!-- End row -->
+
+
+
+                     </div>
+                 
+                  </div>
+
+
+         <!--Start of code section panel-->
+              <div id="code" class="tab-pane">
+                  <pre class="brush: js; highlights: null">
+
+                  <table>
+
+                    <tr><th>Logo</th><th>Name</th><th>City</th><th>Arena</th></tr>
+                     
+                    <tr id="lakers">
+                        <td class="clipperLogo"></td>
+                        <td>Lakers</td>
+                        <td>Los Angeles</td>
+                        <td>Staples Center</td>
+                    </tr>
+
+                    <tr id="celtics">
+                      <td class="celticsLogo"></td>
+                      <td>Celtic</td>
+                      <td>Boston</td>
+                      <td>TD Garden</td>
+                    </tr>
+
+
+                    <tr id="clippers">
+                      <td class="clippersLogo"></td>
+                      <td>Clippers</td>
+                      <td>Los Angeles</td>
+                      <td>Staples Center</td>
+                    </tr>
+
+
+                    <tr id="rockets">
+                      <td class="rocketsLogo"></td>
+                      <td>Rockets</td>
+                      <td>Houston</td>
+                      <td>Toyota Center</td>
+                    </tr>
+
+
+                    <tr id="bulls">
+                      <td class="bullsLogo"></td>
+                      <td>Bulls</td>
+                      <td>Chicago</td>
+                      <td>United Center</td>
+                    </tr>
+
+                  </table>
+                  
+                </pre>                   
+              <!--End code section panel-->
+              </div>
+
+
+                  <!--Example Content end-->
+                 
+                </div>
+                <!--End teamsTable panel-->
+
+
+            </div>
+
+            <!--End of Panel Content -->
+
+
+
+            <!--START OF USER INTERACTION PLAYGROUND -->
+
+            <div class="stepForm">
+                <div class="stepForm-row setup-panel">
+                    <div class="stepForm-step">
+                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <p>Step 1</p>
+                    </div>
+                    <div class="stepForm-step">
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p>Step 2</p>
+                    </div>
+                    <div class="stepForm-step">
+                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <p>Step 3</p>
+                    </div>
+                </div>
+            </div>
+            <form role="form">
+                <div class="row setup-content" id="step-1">
+                    <div class="col-xs-9">
+                        <div class="col-md-9">
+                            <h3> Step 1</h3>
+                            <div class="form-group">
+                                <label class="control-label">First Name</label>
+                                <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Last Name</label>
+                                <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+                            </div>
+                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row setup-content" id="step-2">
+                    <div class="col-xs-9">
+                        <div class="col-md-9">
+                            <h3> Step 2</h3>
+                            <div class="form-group">
+                                <label class="control-label">Company Name</label>
+                                <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Company Address</label>
+                                <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
+                            </div>
+                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row setup-content" id="step-3">
+                    <div class="col-xs-9">
+                        <div class="col-md-9">
+                            <h3> Step 3</h3>
+                            <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>            
+
+            <!--END OF USER INTERACTION PLAYGROUND -->
+
+                      
+                  
+      <!-- **********************************************************************************************************************************************************
+      RIGHT SIDEBAR CONTENT
+      *********************************************************************************************************************************************************** -->                 
+          </section>
+      </section>
+
+      <!--main content end-->
+
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/vendor/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/vendor/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/vendor/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/vendor/common-scripts.js"></script>
+
+    <script type="text/javascript">SyntaxHighlighter.all();</script>  
+    <!--Page Specific scripts -->
+    <script src="assets/js/attributes.js"></script>
+
+
+
+    
+  </body>
+</html>
