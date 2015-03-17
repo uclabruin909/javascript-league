@@ -4,16 +4,20 @@ $(document).ready(function() {
         $('body').popover({selector: '[data-toggle=popover]'});
 
         var stateMap = {
-            playground: document.getElementById('teamTable'),
+            playground: document.getElementById('playground'),
             idButton : document.getElementById('idButton'),
+            queryButton : document.getElementById('querySelectorButton'),
             classButton: document.getElementById('classButton'),
-            tagButton: document.getElementById('tagButton')
+            tagButton: document.getElementById('tagButton'),
+            queryAllButton: document.getElementById('queryAllButton')
         };
 
 
 
         //START IF getBYIdModule//
         var getByIdModule = (function() {
+
+            var selections;
 
             var inputSelection = function() {
                 var inputVal = document.getElementsByClassName('idInput')[0];
@@ -33,7 +37,7 @@ $(document).ready(function() {
             //function to bind to trigger//
             idElSelect = function() {
                 var idInput = "#"+inputSelection();
-                var selections = $(stateMap.playground).find(idInput);
+                selections = $(stateMap.playground).find(idInput);
 
                //clear previous selections//
                 clearPrevSel();
@@ -44,12 +48,17 @@ $(document).ready(function() {
             },
 
 
+
+
             //init//
 
             init = function() {
                 var button = stateMap.idButton;
                 button.addEventListener('click', function() {
-                    idElSelect();
+                  idElSelect();
+                    if (selections.length === 0) {
+                        alert('No HTML Elements were selected!  Try again');
+                    }
                 }, false);
             };
 
@@ -65,8 +74,79 @@ $(document).ready(function() {
 
 
 
+
+        //START Of querySelector Module//
+        var querySelectorModule = (function() {
+
+            var selections;
+
+            var inputSelection = function() {
+                var inputVal = document.getElementsByClassName('querySelectorInput')[0];
+                return inputVal.value;
+            }, 
+
+            clearPrevSel = function() {
+
+                var prevSelected = $(stateMap.playground).find('.selected');
+
+                for (var i =0; i<prevSelected.length; i++) {
+                    $(prevSelected[i]).removeClass('selected');
+                }
+
+            },
+            
+            //function to bind to trigger//
+            idElSelect = function() {
+                var querySelectorInput = inputSelection();
+                selections = $(stateMap.playground).find(querySelectorInput);
+
+                 //check to see if valid DOM elements were selected//
+                if (selections.length === 0) {
+                    alert('No HTML Elements were selected!  Try again');
+                }                
+
+
+               //clear previous selections//
+                clearPrevSel();
+
+                //add the 'selected class to highlight background'
+               selections.addClass('selected');
+
+            },
+
+
+
+
+            //init//
+
+            init = function() {
+                var button = stateMap.queryButton;
+                button.addEventListener('click', function() {
+                    idElSelect();
+
+                }, false);
+            };
+
+
+            return {
+                init: init
+            };
+
+
+        }());
+
+ //END oF querySelector Module//
+
+
+
+
+
+
+
         //START IF getByClassModule//
         var getByClassModule = (function() {
+
+            var selections;
 
             var inputSelection = function() {
                 var inputVal = document.getElementsByClassName('classInput')[0];
@@ -86,13 +166,27 @@ $(document).ready(function() {
             //function to bind to trigger//
             classElSelect = function() {
                 var classInput = "."+inputSelection();
-                var selections = $(stateMap.playground).find(classInput);
+                var classIndex = document.getElementById('classIndex').value;
+                selections = $(stateMap.playground).find(classInput);
+               
+                if ( !(classIndex === 'N/A') ) {
+                    selections = selections[classIndex];
+                    
+                }    
+
+
+                //check to see if valid DOM elements were selected//
+                if (selections.length === 0) {
+                    alert('No HTML Elements were selected!  Try again');
+                }                
+
+                
 
                //clear previous selections//
                 clearPrevSel();
 
                 //add the 'selected class to highlight background'
-               selections.addClass('selected');
+               $(selections).addClass('selected');
 
             },
 
@@ -103,6 +197,7 @@ $(document).ready(function() {
                 var button = stateMap.classButton;
                 button.addEventListener('click', function() {
                     classElSelect();
+               
                 }, false);
             };
 
@@ -123,6 +218,8 @@ $(document).ready(function() {
         //START IF getBYIdModule//
         var getByTagsModule = (function() {
 
+            var selections;
+
             var inputSelection = function() {
                 var inputVal = document.getElementsByClassName('tagInput')[0];
                 return inputVal.value;
@@ -141,15 +238,26 @@ $(document).ready(function() {
             //function to bind to trigger//
             classElSelect = function() {
                 var tagInput = inputSelection();
-                var selections = $(stateMap.playground).find(tagInput);
+                var tagIndex = document.getElementById('tagIndex').value;
+                selections = $(stateMap.playground).find(tagInput);
+
+                if ( !(tagIndex === 'N/A') ) {
+                    selections = selections[tagIndex];
+                    
+                }
+
+                //check to see if valid DOM elements were selected//
+                if (selections.length === 0) {
+                    alert('No HTML Elements were selected!  Try again');
+                }  
+
+
 
                //clear previous selections//
                 clearPrevSel();
 
                 //add the 'selected class to highlight background'
-              for (var i =0; i<selections.length; i++) {
-                    $(selections[i]).addClass('selected');
-                }
+              $(selections).addClass('selected');
 
             },
 
@@ -159,7 +267,7 @@ $(document).ready(function() {
             init = function() {
                 var button = stateMap.tagButton;
                 button.addEventListener('click', function() {
-                    classElSelect();
+                    classElSelect();                       
                 }, false);
             };
 
@@ -172,9 +280,91 @@ $(document).ready(function() {
         }());
 
 
+
+
+
+
+        //START Of querySelector Module//
+        var querySelectorAllModule = (function() {
+
+            var selections;
+
+            var inputSelection = function() {
+                var inputVal = document.getElementsByClassName('queryAllInput')[0];
+                return inputVal.value;
+            }, 
+
+            clearPrevSel = function() {
+
+                var prevSelected = $(stateMap.playground).find('.selected');
+
+                for (var i =0; i<prevSelected.length; i++) {
+                    $(prevSelected[i]).removeClass('selected');
+                }
+
+            },
+            
+            //function to bind to trigger//
+            idElSelect = function() {
+                var querySelectorInput = inputSelection();
+                selections = $(stateMap.playground).find(querySelectorInput);
+                var queryIndex = document.getElementById('queryIndex').value;
+
+                 if ( !(queryIndex === 'N/A') ) {
+                    selections = selections[queryIndex];
+                    
+                }                    
+               
+                //check to see if valid DOM elements were selected//
+                if (selections.length === 0) {
+                    alert('No HTML Elements were selected!  Try again');
+                }                
+
+
+
+               //clear previous selections//
+                clearPrevSel();
+
+
+
+
+
+                //add the 'selected class to highlight background'
+               $(selections).addClass('selected');
+
+            },
+
+
+
+
+            //init//
+
+            init = function() {
+                var button = stateMap.queryAllButton;
+                button.addEventListener('click', function() {
+                    idElSelect();
+
+                }, false);
+            };
+
+
+            return {
+                init: init
+            };
+
+
+        }());
+
+ //END oF querySelector Module//
+
+
+
+
+
 getByIdModule.init();
+querySelectorModule.init();
 getByClassModule.init();
 getByTagsModule.init();
-
+querySelectorAllModule.init();
 });
 
