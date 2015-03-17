@@ -9,13 +9,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-
- 
-
-
-
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
     
     <!-- Custom styles for this template -->
@@ -27,14 +22,46 @@
       <script type="text/javascript" src="assets/js/vendor/shBrushJScript.js"></script>
       <link type="text/css" rel="stylesheet" href="assets/css/shThemeMidnight.css"/>
 
-      
-
-
+    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+        <style>
+
+            @media only screen and (max-width : 800px){
+
+            .widget-profil {
+                    float: none !important;
+                }
+            }
+
+            .widget-profil {
+                float: left;
+            }
+
+
+
+
+            .glyphicon-lg{font-size:3em}
+            .blockquote-box{border-right:5px solid #E6E6E6;margin-bottom:25px}
+            .blockquote-box .square{width:100px;min-height:50px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:20px 0}
+
+
+            #teamTable {
+              width: 100%;
+            }
+
+            .single-selector tbody td{
+              vertical-align: middle;
+              height: 100%;
+            }
+        </style>
+
+
+
   </head>
 
   <body>
@@ -49,7 +76,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Vanilla Javascript</b></a>
+            <a href="index.html" class="logo"><b>JS Basketball League</b></a>
             <!--logo end-->
         </header>
       <!--header end-->
@@ -63,37 +90,23 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/logo.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Vanilla Javascript</h5>
+              	  <p class="centered"><a href="profile.html"><img class="mainLogo" src="assets/images/logo/jsLogo1.png"></a></p>
+
               	  	
+
+
                   <li class="mt">
-                      <a class="active" href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Basics</span>
-                      </a>
-                  </li>
-
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="selectors.html" >
                           <i class="fa fa-desktop"></i>
                           <span>Selectors</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Guide</a></li>
-                          <li><a  href="">Playground</a></li>
-                      </ul>
-                  </li>                  
+                  </li>                     
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a  class="active" href="attributes.html" >
                           <i class="fa fa-desktop"></i>
                           <span>Properties</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Guide</a></li>
-                          <li><a  href="">Playground</a></li>
-                      </ul>
                   </li>
 
                   <li class="sub-menu">
@@ -108,15 +121,10 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="content.html" >
                           <i class="fa fa-book"></i>
-                          <span>Manipulation</span>
+                          <span>Manipulation/Content</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Blank Page</a></li>
-                          <li><a  href="">Login</a></li>
-                          <li><a  href="">Lock Screen</a></li>
-                      </ul>
                   </li>
 
                   <li class="sub-menu">
@@ -151,104 +159,376 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
-          <section class="wrapper">
+          <section class="wrapper container-fluid">
 
-				<div class="page-header"><h1>JS Selectors</h1></div>
+				<div class="page-header">
+          <div class="col-xs-12">
+              <div class="blockquote-box clearfix">
+                  <h3>JAVASCRIPT SELECTOR METHODS</h3>
+                  <p>
+                      When you want to select a single DOM element using Javascript, you can use the <strong>document.getElementById</strong> method as well as the <strong>document.querySelector</strong> method.  Each one of these will return the first match instance. 
+                  </p>
+              </div>          
+          </div>
+        </div>
 
-				<!--Example Content start -->
-				<div class="container-fluid">
-
-
-
-          <!--Nav tabs -->
+        <!--Nav tabs -->
           <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="#playground" role="tab" data-toggle="tab">Playground</a></li>
             <li><a href="#code" role="tab" data-toggle="tab">Code</a></li>
+            <li><a href="#help" role="tab" data-toggle="tab">Help</a></li>
 
           </ul>
 
-					
+          
 
-
-            <!--Panel Content Start-->
+         <!--Panel Content Start-->
             <div class="tab-content">
 
               
                 <!--Start of teams table panel-->
                 <div id="playground" class="tab-pane active">
-                  <table id="teamTable" class="table table-bordered">
-                  <th>Logo</th><th>Name</th><th>City</th><th>Arena</th>
-                  <tr id="lakers"><td class="clipperLogo"></td><td>Lakers</td><td>Los Angeles</td><td>Staples Center</td></tr>
-                  <tr id="celtics"><td class="celticsLogo"></td><td>Celtic</td><td>Boston</td><td>TD Garden</td></tr>
-                  <tr id="clippers"><td class="clippersLogo"></td><td>Clippers</td><td>Los Angeles</td><td>Staples Center</td></tr>
-                  <tr id="rockets"><td class="rocketsLogo"></td><td>Rockets</td><td>Houston</td><td>Toyota Center</td></tr>
-                  <tr id="bulls"><td class="bullsLogo"></td><td>Bulls</td><td>Chicago</td><td>United Center</td></tr>                                          
-                  </table>
-                </div>
-                <!--End teamsTable panel-->
+                  <!--Example Content start -->
+
+                     
+                      <div class="row">
+
+
+                        <div class="col-xs-12">
+
+                          <!--START OF TEAM TABLE-->
+                          <table id="teamTable" class="table table-bordered">
+                            <tr><th>Logo</th><th>Name</th><th>Conference</th><th>City</th><th>Arena</th></tr>
+                             
+                            <tr id="Lakers">
+                                <td class="lakersLogo"></td>
+                                <td>Lakers</td>
+                                <td class="western">Western</td>
+                                <td>Los Angeles</td>
+                                <td>Staples Center</td>
+                            </tr>
+
+                            <tr id="Celtics">
+                              <td class="celticsLogo"></td>
+                              <td>Celtic</td>
+                              <td class="eastern">Eastern</td>
+                              <td>Boston</td>
+                              <td>TD Garden</td>
+                            </tr>
+
+
+                            <tr id="Clippers">
+                              <td class="clippersLogo"></td>
+                              <td>Clippers</td>
+                              <td class="western">Western</td>
+                              <td>Los Angeles</td>
+                              <td>Staples Center</td>
+                            </tr>
+
+
+                            <tr id="Rockets">
+                              <td class="rocketsLogo"></td>
+                              <td>Rockets</td>
+                              <td class="western">Western</td>
+                              <td>Houston</td>
+                              <td>Toyota Center</td>
+                            </tr>
+
+
+                            <tr id="Bulls">
+                              <td class="bullsLogo"></td>
+                              <td>Bulls</td>
+                              <td class="eastern">Eastern</td>
+
+                              <td>Chicago</td>
+                              <td>United Center</td>
+                            </tr>                                          
+                          </table>  
+                           <!--END OF TEAM TABLE-->
+
+
+                        </div><!-- End col-md-12 -->
 
 
 
-              <!--Start of code section panel-->
+                      </div><!-- End row -->
+
+
+                 
+                  </div>
+                  <!--END OF PLAYGOUND TAB PANE -->
+
+         <!--Start of code section panel-->
               <div id="code" class="tab-pane">
                   <pre class="brush: js; highlights: null">
 
                   <table>
 
-                    <tr><th>Logo</th><th>Name</th><th>City</th><th>Arena</th></tr>
+                    <tr><th>Logo</th><th>Name</th><th>Conference</th><th>City</th><th>Arena</th></tr>
                      
-                    <tr id="lakers">
-                        <td class="clipperLogo"></td>
+                    <tr id="Lakers">
+                        <td class="lakersLogo"></td>
                         <td>Lakers</td>
+                        <td class="western">Western</td>
                         <td>Los Angeles</td>
                         <td>Staples Center</td>
                     </tr>
 
-                    <tr id="celtics">
+                    <tr id="Celtics">
                       <td class="celticsLogo"></td>
                       <td>Celtic</td>
+                      <td class="eastern">Eastern</td>
                       <td>Boston</td>
                       <td>TD Garden</td>
                     </tr>
 
 
-                    <tr id="clippers">
+                    <tr id="Clippers">
                       <td class="clippersLogo"></td>
                       <td>Clippers</td>
+                      <td class="western">Western</td>
                       <td>Los Angeles</td>
                       <td>Staples Center</td>
                     </tr>
 
 
-                    <tr id="rockets">
+                    <tr id="Rockets">
                       <td class="rocketsLogo"></td>
                       <td>Rockets</td>
+                      <td class="western">Western</td>
                       <td>Houston</td>
                       <td>Toyota Center</td>
                     </tr>
 
 
-                    <tr id="bulls">
+                    <tr id="Bulls">
                       <td class="bullsLogo"></td>
                       <td>Bulls</td>
+                      <td class="eastern">Eastern</td>
+
                       <td>Chicago</td>
                       <td>United Center</td>
                     </tr>
 
                   </table>
                   
-                  </pre>                   
+                </pre>                   
               <!--End code section panel-->
               </div>
 
 
+
+         <!--Start of help section panel-->
+              <div id="help" class="tab-pane">
+              
+
+              </div>
+              <!--End code section panel-->
+
+
+
+
+            <!--Example Content end-->
+           
+          </div>
+          <!--End teamsTable panel-->
+
+
+
+
+
+
+
+
+
+          </div>
+
+        <!--End of Panel Content -->
+
+
+
+        <!--START OF USER INTERACTION PLAYGROUND -->
+
+        <div class="row">
+          
+          <div class="col-xs-12">
+              <div class="blockquote-box clearfix">
+                  <div class="square pull-left">
+                      <img src="http://placehold.it/60/8e44ad/FFF&text=B" alt="" class="" />
+                  </div>
+                  <h4>Methods that Select Single Element Node</h4>
+                  <p>
+                      When you want to select a single DOM element using Javascript, you can use the <strong>document.getElementById</strong> method as well as the <strong>document.querySelector</strong> method.  Each one of these will return the first match instance. 
+                  </p>
+              </div>          
+          </div>
+
+
+
+          <div class="row single-selector">
+          <!--START OF SINGLE SELECTOR AREA -->
+            
+
+            <div class="col-xs-12 col-sm-8">
+
+              <table class="table table-responsive">
+              <!--Start of Single Selector Table -->
+                <tr><th>METHOD</th><th>PARAMETER</th><th></th></tr>
+                <tr>
+                  <td style="vertical-align:middle">document.getElementById()</td>
+                  <td style="vertical-align:middle">
+                    <select name="idInput" class="idInput" form="carform">
+                      <option value="Lakers">Lakers</option>
+                      <option value="Celtics">Celtics</option>
+                      <option value="Clippers">Clippers</option>
+                      <option value="Rockets">Rockets</option>
+                    </select>
+                  </td>
+
+                  <td><button id="idButton" type="button" class="btn btn-success">Submit</button></td>
+
+                </tr>
+
+
+                <tr>
+                  <td style="vertical-align:middle">document.querySelector()</td>
+                  <td style="vertical-align:middle">
+                    <input type="text-box" class="querySelectorInput"></input>
+                  </td>
+
+                  <td><button id="querySelectorButton" type="button" class="btn btn-success">Submit</button></td>
+
+                </tr>
+
+
+              </table>
+              <!--END of Single Selector Table -->
             </div>
-            <!--End of Panel Content -->
+
+          </div>
+          <!--END OF SINGLE SELECTOR AREA -->
 
 
-					</div>
-          <!--End of Container -->
 
+
+
+          <div class="col-xs-12">
+              <div class="blockquote-box clearfix">
+                  <div class="square pull-left">
+                      <img src="http://placehold.it/60/8e44ad/FFF&text=B" alt="" class="" />
+                  </div>
+                  <h4>Methods that Return Node List</h4>
+                  <p>
+                      When you want to select a single DOM element using Javascript, you can use the <strong>document.getElementById</strong> method as well as the <strong>document.querySelector</strong> method.  Each one of these will return the first match instance. 
+                  </p>
+              </div>          
+          </div>
+
+
+
+          <div class="row multiple-selector">
+          <!--START OF Multiple SELECTOR AREA -->
+            
+
+            <div class="col-xs-12 col-sm-8">
+
+              <table class="table table-responsive">
+              <!--Start of Single Selector Table -->
+                <tr><th>METHOD</th><th>PARAMETER</th><th>Index Number</th><th></th></tr>
+                <tr>
+                  <td style="vertical-align:middle">document.getElementsByClassName</td>
+                  <td style="vertical-align:middle">
+                    <select name="classInput" class="classInput" form="carform">
+                      <option value="lakersLogo">lakersLogo</option>
+                      <option value="celticsLogo">celticsLogo</option>
+                      <option value="clippersLogo">clippersLogo</option>
+                      <option value="rocketsLogo">rocketsLogo</option>
+                      <option value="eastern">eastern</option>
+                      <option value="western">western</option>
+                    </select>
+                  </td>
+
+                  <td>
+                    <select name="classIndex" id="classIndex" form="carform">
+                      <option value="N/A">N/A</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </td>
+
+
+                  <td><button id="classButton" type="button" class="btn btn-success">Submit</button></td>
+
+                </tr>
+
+
+                <tr>
+                  <td style="vertical-align:middle">document.getElementsByTagName</td>
+                  <td style="vertical-align:middle">
+                    <select name="tagInput" class="tagInput" form="carform">
+                      <option value="td">td</option>
+                      <option value="img">img</option>
+                      <option value="tr">tr</option>
+                      <option value="th">th</option>
+                    </select>
+                  </td>
+
+
+                  <td>
+                    <select name="tagIndex" id="tagIndex">
+                      <option value="N/A">N/A</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>                    
+                    </select>
+                  </td>
+
+
+                  <td><button id="tagButton" type="button" class="btn btn-success">Submit</button></td>
+
+                </tr>
+
+
+
+                <tr>
+                  <td style="vertical-align:middle">document.querySelectorAll</td>
+                  <td style="vertical-align:middle">
+                    <input type="text-box" class="queryAllInput"></input>
+                  </td>
+
+                  <td>
+                    <select name="queryIndex" id="queryIndex">
+                      <option value="N/A">N/A</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>                    
+                    </select>
+                  </td>
+
+
+                  <td><button id="queryAllButton" type="button" class="btn btn-success">Submit</button></td>
+
+                </tr>
+
+
+              </table>
+              <!--END of Single Selector Table -->
+            </div>
+
+          </div>
+          <!--END OF SINGLE SELECTOR AREA -->
+
+
+
+
+
+
+        </div>
+        <!--END OF USER INTERACTION PLAYGROUND ROW -->
 
                       
                   
@@ -274,7 +554,7 @@
     <!--common script for all pages-->
     <script src="assets/js/vendor/common-scripts.js"></script>
 
-          <script type="text/javascript">SyntaxHighlighter.all();</script>  
+    <script type="text/javascript">SyntaxHighlighter.all();</script>  
     <!--Page Specific scripts -->
     <script src="assets/js/selectors.js"></script>
 
