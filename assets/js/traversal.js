@@ -72,10 +72,10 @@
 
               keyDown100: function() {
 
-                if (stateMap.guideEl.nextElmentSibling) {
+                if (stateMap.guideEl.nextElementSibling) {
                   //refresh previous elements fill color//
                    stateMap.currentEl.style.fill = 'none';                  
-                  stateMap.guideEl = stateMap.guideEl.nextElmentSibling;
+                  stateMap.guideEl = stateMap.guideEl.nextElementSibling;
                   stateMap.guideElId = stateMap.guideEl.id;
                 }
 
@@ -112,7 +112,9 @@
               var newEl = document.getElementById(stateMap.guideElId);
               stateMap.currentEl = newEl;
                 //fill in new currentElement/
-                stateMap.currentEl.style.fill = 'green';                 
+                stateMap.currentEl.style.fill = 'green';     
+                console.log(stateMap.currentEl);  
+                console.log(stateMap.guideElId);          
 
             };
 
@@ -121,7 +123,7 @@
             var traverseIt = function(event) {
 
               //run only if it is one of programmed keyCodes //
-              if (event.keyCode === 97 || 98 || 99 || 100 || 101 ) {
+              if ( (event.keyCode === 97 || 98 || 99 || 100 || 101) ) {
                   var keyCode = 'keyDown' + event.keyCode;
                   controlMap[keyCode]();
                   _setNewCurrentEl();               
@@ -129,6 +131,7 @@
 
               else {
                 alert('This button is not programmed');
+                return false;
               }
 
             };
