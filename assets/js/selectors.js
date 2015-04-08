@@ -110,7 +110,7 @@ $(document).ready(function() {
                 clearPrevSel();
 
                 //add the 'selected class to highlight background'
-               selections.addClass('selected');
+               $(selections[0]).addClass('selected');
 
             },
 

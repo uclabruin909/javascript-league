@@ -13,15 +13,16 @@
 
             var stateMap = {
 
-              guideEl: document.getElementById('code'),
-              guideElId: 'code',
+              highlightColor: '#424a5d',
+              guideEl: document.getElementById('codeArea'),
+              guideElId: 'codeArea',
               currentEl: document.getElementById('nbaLogo')
 
             },
 
             controlMap = {
 
-              keyDown97: function() {
+              keyDown49: function() {
 
                 if (stateMap.guideEl.firstElementChild) {
                 //refresh previous elements fill color//
@@ -38,7 +39,7 @@
                 
                 
               },
-              keyDown98: function() {
+              keyDown50: function() {
 
                 if (stateMap.guideEl.lastElementChild) {
                   //refresh previous elements fill color//
@@ -54,7 +55,7 @@
                 }  
               },
 
-              keyDown99: function() {
+              keyDown51: function() {
 
                 if (stateMap.guideEl.previousElementSibling) {
                   //refresh previous elements fill color//
@@ -70,7 +71,7 @@
                 }  
               },
 
-              keyDown100: function() {
+              keyDown52: function() {
 
                 if (stateMap.guideEl.nextElementSibling) {
                   //refresh previous elements fill color//
@@ -85,11 +86,11 @@
                 }  
               },
 
-              keyDown101: function() {
+              keyDown53: function() {
 
 
                   //make sure it does not go past code playground boundary//
-                if ( (stateMap.guideEl.parentElement) && !(stateMap.guideEl.parentElement.id === 'code') ) {
+                if ( (stateMap.guideEl.parentElement) && !(stateMap.guideEl.parentElement.id === 'codeArea') ) {
 
 
                   //refresh previous elements fill color//
@@ -112,7 +113,7 @@
               var newEl = document.getElementById(stateMap.guideElId);
               stateMap.currentEl = newEl;
                 //fill in new currentElement/
-                stateMap.currentEl.style.fill = 'green';     
+                stateMap.currentEl.style.fill = stateMap.highlightColor;     
                 console.log(stateMap.currentEl);  
                 console.log(stateMap.guideElId);          
 
@@ -121,9 +122,10 @@
             //public method//
 
             var traverseIt = function(event) {
+              var keyCode = event.keyCode;
 
               //run only if it is one of programmed keyCodes //
-              if ( (event.keyCode === 97 || 98 || 99 || 100 || 101) ) {
+              if ( (event.keyCode === 49 || 50 || 51 || 52 || 53) ) {
                   var keyCode = 'keyDown' + event.keyCode;
                   controlMap[keyCode]();
                   _setNewCurrentEl();               
