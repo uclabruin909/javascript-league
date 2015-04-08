@@ -97,6 +97,121 @@
             /************************************************************/
 
 
+
+        .range {
+		    display: table;
+		    position: relative;
+		    height: 25px;
+		    background-color: rgb(245, 245, 245);
+		    border-radius: 4px;
+		    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		    cursor: pointer;
+		}
+
+		.range input[type="range"] {
+		    -webkit-appearance: none !important;
+		    -moz-appearance: none !important;
+		    -ms-appearance: none !important;
+		    -o-appearance: none !important;
+		    appearance: none !important;
+
+		    display: table-cell;
+		    width: 100%;
+		    background-color: transparent;
+		    height: 25px;
+		    cursor: pointer;
+		}
+		.range input[type="range"]::-webkit-slider-thumb {
+		    -webkit-appearance: none !important;
+		    -moz-appearance: none !important;
+		    -ms-appearance: none !important;
+		    -o-appearance: none !important;
+		    appearance: none !important;
+
+		    width: 11px;
+		    height: 25px;
+		    color: rgb(255, 255, 255);
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: baseline;
+		    border-radius: 0px;
+		    background-color: rgb(153, 153, 153);
+		}
+
+		.range input[type="range"]::-moz-slider-thumb {
+		    -webkit-appearance: none !important;
+		    -moz-appearance: none !important;
+		    -ms-appearance: none !important;
+		    -o-appearance: none !important;
+		    appearance: none !important;
+		    
+		    width: 11px;
+		    height: 25px;
+		    color: rgb(255, 255, 255);
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: baseline;
+		    border-radius: 0px;
+		    background-color: rgb(153, 153, 153);
+		}
+
+		.range output {
+		    display: table-cell;
+		    padding: 3px 5px 2px;
+		    min-width: 40px;
+
+		    color: black;
+		    background-color: rgb(153, 153, 153);
+		    text-align: center;
+		    text-decoration: none;
+		    border-radius: 4px;
+		    border-bottom-left-radius: 0;
+		    border-top-left-radius: 0;
+		    width: 1%;
+		    white-space: nowrap;
+		    vertical-align: middle;
+
+		    -webkit-transition: all 0.5s ease;
+		    -moz-transition: all 0.5s ease;
+		    -o-transition: all 0.5s ease;
+		    -ms-transition: all 0.5s ease;
+		    transition: all 0.5s ease;
+
+		    -webkit-user-select: none;
+		    -khtml-user-select: none;
+		    -moz-user-select: -moz-none;
+		    -o-user-select: none;
+		    user-select: none;
+		}
+		.range input[type="range"] {
+		    outline: none;
+		}
+
+
+		.range.range-warning input[type="range"]::-webkit-slider-thumb {
+		    background-color: rgb(240, 173, 78);
+		}
+		.range.range-warning input[type="range"]::-moz-slider-thumb {
+		    background-color: rgb(240, 173, 78);
+		}
+		.range.range-warning output {
+		    background-color: rgb(240, 173, 78);
+		}
+		.range.range-warning input[type="range"] {
+		    outline-color: rgb(240, 173, 78);
+		}
+
+
+		th {
+			text-align: center;
+		}
+
+		td{
+			text-align: center;
+		}
+
+
         </style>
 
 
@@ -149,26 +264,17 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="traversal.html" >
                           <i class="fa fa-cogs"></i>
                           <span>Traversal</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Guide</a></li>
-                          <li><a  href="">Playground</a></li>
-                          <li><a  href="">Todo List</a></li>
-                      </ul>
+
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="content.html" >
                           <i class="fa fa-book"></i>
-                          <span>Manipulation</span>
+                          <span>Manipulation/Content</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Blank Page</a></li>
-                          <li><a  href="">Login</a></li>
-                          <li><a  href="">Lock Screen</a></li>
-                      </ul>
                   </li>
 
                   <li class="sub-menu">
@@ -176,20 +282,13 @@
                           <i class="fa fa-tasks"></i>
                           <span>Styles</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Styling</a></li>
-                      </ul>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="positioning.html">
                           <i class="fa fa-th"></i>
                           <span>Positioning</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="">Guide</a></li>
-                          <li><a  href="">Playground</a></li>
-                      </ul>
                   </li>
 
               </ul>
@@ -203,15 +302,27 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
-          <section class="wrapper container">
+          <section class="wrapper container-fluid">
 
-				<div class="page-header"><h1>JS Attributes</h1></div>
+				<div class="page-header">
+          <div class="col-xs-12">
+              <div class="blockquote-box clearfix">
+
+                  <h3>Styling DOM with Javascript</h3>
+                  <p>
+                      To style a specific HTML element, you will specifying the properties to the <strong>style object</strong>.  This object represents all the stylistic values that have been applied HTML element's <strong>style attribute</strong> so by 
+                  </p>
+              </div>          
+          </div>
+
+
+        </div>
 
         <!--Nav tabs -->
           <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="#playground" role="tab" data-toggle="tab">Playground</a></li>
             <li><a href="#code" role="tab" data-toggle="tab">Code</a></li>
-
+            <li><a href="#help" role="tab" data-toggle="tab">Help</a></li>
           </ul>
 
           
@@ -335,7 +446,7 @@
                                                                           <i class="glyphicon glyphicon-user"></i>
                                                                           <label><b>SHOOTING</b></label>
                                                                           <span class="value">
-                                                                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                              <div id="shooting" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
                                                                           </span>
                                                                           <div class="clear"></div>
                                                                       </li>
@@ -344,7 +455,7 @@
                                                                           <i class="glyphicon glyphicon-calendar"></i>
                                                                           <label><b>PASSING</b></label>
                                                                           <span class="value">
-                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                            <div id="passing" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
                                                                           </span>
                                                                           <div class="clear"></div>
                                                                       </li>
@@ -353,7 +464,7 @@
                                                                           <i class="glyphicon glyphicon-map-marker"></i>
                                                                           <label><b>DEFENSE</b></label>
                                                                           <span class="value">
-                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                            <div id="defense" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
                                                                           </span>
                                                                           <div class="clear"></div>
                                                                       </li>
@@ -362,7 +473,7 @@
                                                                           <i class="glyphicon glyphicon-envelope"></i>
                                                                           <label><b>LEADERSHIP</b></label>
                                                                           <span class="value">
-                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                                            <div id="leadership" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
                                                                           </span>
                                                                           <div class="clear"></div>
                                                                       </li>
@@ -444,13 +555,73 @@
                   </table>
                   
                 </pre>                   
-              <!--End code section panel-->
+
               </div>
+              <!--End code section panel-->
 
-
-                  <!--Example Content end-->
+                  
                  
+
+         <!--Start of HELP section panel-->
+              <div id="help" class="tab-pane">
+                  <pre class="brush: js; highlights: null">
+
+                  <table>
+
+                    <tr><th>Logo</th><th>Name</th><th>City</th><th>Arena</th></tr>
+                     
+                    <tr id="lakers">
+                        <td class="clipperLogo"></td>
+                        <td>Lakers</td>
+                        <td>Los Angeles</td>
+                        <td>Staples Center</td>
+                    </tr>
+
+                    <tr id="celtics">
+                      <td class="celticsLogo"></td>
+                      <td>Celtic</td>
+                      <td>Boston</td>
+                      <td>TD Garden</td>
+                    </tr>
+
+
+                    <tr id="clippers">
+                      <td class="clippersLogo"></td>
+                      <td>Clippers</td>
+                      <td>Los Angeles</td>
+                      <td>Staples Center</td>
+                    </tr>
+
+
+                    <tr id="rockets">
+                      <td class="rocketsLogo"></td>
+                      <td>Rockets</td>
+                      <td>Houston</td>
+                      <td>Toyota Center</td>
+                    </tr>
+
+
+                    <tr id="bulls">
+                      <td class="bullsLogo"></td>
+                      <td>Bulls</td>
+                      <td>Chicago</td>
+                      <td>United Center</td>
+                    </tr>
+
+                  </table>
+                  
+                </pre>                   
+
+              </div>
+              <!--End HELP section panel-->
+
+
+
+
+
+
                 </div>
+                <!--TAB Content end-->
                 <!--End teamsTable panel-->
 
 
@@ -476,46 +647,111 @@
                         <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
                         <p>Step 3</p>
                     </div>
+
                 </div>
+
             </div>
+
+	        <div class="row stepCode">
+	        	<div style="text-align: center" class="stepCodeTxt">document.getElementById('passing').style.width</div>
+	        </div>
+
             <form role="form">
                 <div class="row setup-content" id="step-1">
-                    <div class="col-xs-9">
-                        <div class="col-md-9">
+                    <div class="col-xs-10">
+                        <div class="col-md-10">
                             <h3> Step 1</h3>
                             <div class="form-group">
-                                <label class="control-label">First Name</label>
-                                <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+                              <table class="table table-responsive">
+                              <!--Start of Single Selector Table -->
+                                <tr><th>METHOD</th><th>PARAMETER</th><th></th><th></th></tr>
+                                <tr>
+                                  <td style="vertical-align:middle">document.getElementById()</td>
+                                  <td style="vertical-align:middle">
+                                    <select name="idInput" class="idInput" form="">
+                                      <option value="shooting">shooting</option>
+                                      <option value="passing">passing</option>
+                                      <option value="defense">defense</option>
+                                      <option value="leadership">leadership</option>
+                                    </select>
+                                  </td>
+
+                                  <td><button id="idButton" class="btn btn-success" type="button" >SELECT</button></td>
+
+
+                                  <td><button id="step1But" class="btn btn-primary nextBtn pull-right" type="button" >NEXT</button></td>
+
+
+                                </tr>
+                              </table>                                
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Last Name</label>
-                                <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
-                            </div>
-                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
                         </div>
                     </div>
                 </div>
                 <div class="row setup-content" id="step-2">
-                    <div class="col-xs-9">
-                        <div class="col-md-9">
+                    <div class="col-xs-12">
+                        <div class="col-md-12">
                             <h3> Step 2</h3>
-                            <div class="form-group">
-                                <label class="control-label">Company Name</label>
-                                <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Company Address</label>
-                                <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
-                            </div>
-                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                            <table class="table table-responsive">
+                              <!--Start of Single Selector Table -->
+                                <tr><th>STYLE PROPERTY</th><th>VALUE</th><th></th><th></th></tr>
+    
+                                <tr>
+                                  <td style="vertical-align:middle">
+                                    <p>width</p>
+                                  </td>
+
+
+                                  <td style="vertical-align:middle">
+            							          <div class="range range-warning">
+            							            <input type="range" name="range" min="1" max="100" value="50" onchange="rangeWarning.value=value">
+            							            <output id="rangeWarning">50</output>
+            							          </div>
+
+                                  </td>
+
+                                </tr>
+
+
+
+                                <tr>
+                                  <td style="vertical-align:middle">
+                                    <p>backgroundColor</p>
+                                  </td>
+
+
+                                  <td style="vertical-align:middle">
+                                    <select name="backgroundInput" class="backgroundInput" form="">
+                                      <option value="black">black</option>
+                                      <option value="red">red</option>
+                                      <option value="green">green</option>
+                                      <option value="purple">purple</option>
+                                    </select>
+                                  </td>
+
+                                </tr>
+
+
+
+
+
+                                <tr>
+
+                                  <td colspan=2 style="vertical-align:middle; text-align: center">
+                                    <button id="step2But" class="btn btn-success" type="button" >SELECT</button>
+                                  	<button class="btn btn-primary nextBtn" type="button" >NEXT</button>
+                                </tr>
+
+
+                              </table>                           
                         </div>
                     </div>
                 </div>
                 <div class="row setup-content" id="step-3">
-                    <div class="col-xs-9">
-                        <div class="col-md-9">
+                    <div class="col-xs-12" style="text-align: center">
+                        <div class="col-md-12">
                             <h3> Step 3</h3>
-                            <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+                            <button id ="step3But" class="btn btn-success btn-lg" type="button">Finish!</button>
                         </div>
                     </div>
                 </div>
@@ -550,7 +786,7 @@
 
     <script type="text/javascript">SyntaxHighlighter.all();</script>  
     <!--Page Specific scripts -->
-    <script src="assets/js/attributes.js"></script>
+        <script src="assets/js/attributes.js"></script>
 
 
 
