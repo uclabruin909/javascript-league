@@ -102,7 +102,20 @@
                 else {
                   alert('The current element does not have a parent Element');
 
-                }  
+                }
+            },
+
+            keyDown13: function() {
+              var teamURL = stateMap.currentEl.dataset.teamurl;
+
+              if (teamURL) {
+                window.open(teamURL);
+              }
+
+              else{
+                alert('This is not a valid team.  Please choose a specific team');
+              }
+
             },
 
           }, //end of controlMap//
@@ -125,7 +138,7 @@
               var keyCode = event.keyCode;
 
               //run only if it is one of programmed keyCodes //
-              if ( (event.keyCode === 49 || 50 || 51 || 52 || 53) ) {
+              if ( (event.keyCode == 49 || 50 || 51 || 52 || 53 || 13) ) {
                   var keyCode = 'keyDown' + event.keyCode;
                   controlMap[keyCode]();
                   _setNewCurrentEl();               
