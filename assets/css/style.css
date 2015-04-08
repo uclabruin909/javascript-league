@@ -265,7 +265,7 @@ ul.sidebar-menu li a.active i {
 .wrapper {
     display: inline-block;
     margin-top: 60px;
-    padding-left: 45px;
+    padding-left: 10px;
     padding-right: 30px;
     padding-bottom: 15px;
     padding-top: 0px;
@@ -330,12 +330,14 @@ a.logo span {
     float: left;
     padding-right: 15px;
     margin-top: 20px;
+    margin-left: 45px;
+    color: white;
 }
 
 .sidebar-toggle-box .fa-bars {
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 
@@ -448,7 +450,7 @@ a.logo span {
     text-align: center;
 }
 
-#lakers .clipperLogo {
+#Lakers .lakersLogo {
     height: 75px;
     width: 75px;
     background: url(../images/lakers.jpg) no-repeat;
@@ -459,7 +461,7 @@ a.logo span {
 }
 
 
-#celtics .celticsLogo {
+#Celtics .celticsLogo {
     height: 75px;
     width: 75px;
     background: url(../images/celtics.jpg) no-repeat;
@@ -468,7 +470,7 @@ a.logo span {
 
 }
 
-#clippers .clippersLogo {
+#Clippers .clippersLogo {
     height: 75px;
     width: 75px;
     background: url(../images/clippers.jpg) no-repeat;
@@ -477,7 +479,7 @@ a.logo span {
 
 }
 
-#rockets .rocketsLogo {
+#Rockets .rocketsLogo {
     height: 75px;
     width: 75px;
     background: url(../images/rockets.jpg) no-repeat;
@@ -486,7 +488,7 @@ a.logo span {
 
 }
 
-#bulls .bullsLogo {
+#Bulls .bullsLogo {
     height: 75px;
     width: 75px;
     background: url(../images/bulls.jpg) no-repeat;
@@ -502,7 +504,7 @@ a.logo span {
 
 
 .selected {
-    background-color: #8caed4 !important;
+    background-color: #d48e8c !important;
 }
 
 
@@ -959,7 +961,7 @@ ul.about {
         margin-top: 0;
     }
 
-
+}
 
 @media screen and (max-width: 384px) {
 
@@ -1039,3 +1041,27 @@ padding: 15px;
 /**********************************************/
 /*********ATTRIBUTES PAGE SECTION END ********/
 /**********************************************/
+
+
+.targetedSelection {
+    background: red; 
+}
+
+
+
+
+
+
+
+
+/**********************************************/
+/*********CONTENT PAGE SECTION END ********/
+/**********************************************/
+
+.scoutTxt{
+    padding-left: 5%;
+}
+
+textarea#scoutTxtContent {
+    width: 100%;
+}
